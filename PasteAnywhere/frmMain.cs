@@ -40,6 +40,7 @@ namespace PasteAnywhere
         {
             e.Cancel = true;
             this.WindowState = FormWindowState.Minimized;
+            this.Visible = false;
             this.ShowInTaskbar = false;
         }
 
@@ -58,6 +59,11 @@ namespace PasteAnywhere
         {
             this.Visible = true;
             this.WindowState = FormWindowState.Normal;
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            this.Visible = false;
         }
     }
 }
